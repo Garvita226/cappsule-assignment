@@ -1,13 +1,255 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: block;
+  width: 100vw;
+}
+
+.heading {
+  width: 400px;
+  margin: auto;
+  margin-top: 74px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.search-container {
+  width: 1099px;
+  height: 148px;
+  margin: auto;
+  margin-top: 43px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.search-box {
+  width: 1002px;
+  height: 60px;
+  border-radius: 35px;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 10px 10px 50px 0 rgba(173, 173, 173, 0.4);
+  /* padding: 19px; */
+  position: relative;
+  padding-left: 82px;
+}
+
+.search-box::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #112D316B;
+  position: absolute;
+  top: 19px;
+}
+
+.search-btn {
+  width: 130px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  border: none;
+  line-height: 22px;
+  color: #2A527A;
+  position: absolute;
+  /* border: 2px solid black; */
+  left: 918px;
+  top: 3px;
+  padding-left: 15px;
+  border-radius: 35px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-container img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 75px;
+  top: 18px;
+  z-index: 100;
+}
+
+.hr-line {
+  width: 1017.37px;
+  border: 1px;
+  position: absolute;
+  top: 265px;
+  left: 135px;
+}
+
+.footer {
+  width: 420px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #888888;
+  margin: auto;
+  margin-top: 180px;
+}
+
+.salt-container {
+  width: 1007px;
+  /* border: 2px solid black; */
+  position: absolute;
+  top: 303px;
+  left: 140px;
+}
+
+.salt {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-basis: 0;
+  align-items: center;
+  /* flex-direction: column; */
+  width: 100%;
+  /* min-height: 180px; */
+  /* border: 1px solid red; */
+  border-radius: 15px;
+  background: linear-gradient(275.41deg, #D5E7E6 -27.33%, #FFFFFF 46.85%);
+  box-shadow: 0px 0px 30px 0px #0000001A;
+  margin-bottom: 42px;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.form, .strength, .packaging {
+  margin-bottom: 30px;
+  /* margin-left: 30px; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+}
+
+.form span, .strength span, .packaging span {
+  width: 86px;
+}
+
+/* .form {
+  display: flex;
+  position: absolute;
+  top: 27px;
+  left: 30px;
+}
+
+.strength {
+  display: flex;
+  position: absolute;
+  top: 77px;
+  left: 30px;
+}
+
+.packaging {
+  display: flex;
+  position: absolute;
+  top: 131px;
+  left: 30px;
+} */
+
+.btn-container {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  /* align-items: stretch; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+  gap: 10px;
+  /* position: absolute; */
+  width: auto;
+  /* left: 128px; */
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.btn-container button {
+  /* flex: 1 1 calc(50% - 10px);  */
+  margin-bottom: 10px; /* Space between rows */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.selected {
+  width: auto;
+  border: 1.5px solid #112D31;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  margin-right: 10px;
+  box-shadow: 0px 0px 11.54px 0px #00C5A166;
+
+}
+
+.not-selected {
+  width: auto;
+  border: 1px solid #ABABAB;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  margin-right: 21px;
+}
+
+.btnText-selected {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20.28px;
+  color: #112D31;
+}
+
+.btnText-not-selected {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20.28px;
+  color: #555555;
+}
+
+.btn-more {
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  border: none;
+  background: transparent;
+  /* flex: 1 1 100%; */
+  grid-column: 2; /* Ensure the "more" button is in the second column */
+  justify-self: end;
+}
+
+.btnMore-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21.84px;
+  color: #204772;
+}
+
+button {
+  cursor: pointer;
+}
+
+.label {
+font-size: 16.55px;
+font-weight: 600;
+line-height: 24.82px;
+text-align: center;
+color: #222222;
+}
+
+.info {
+font-size: 12.87px;
+font-weight: 500;
+line-height: 19.3px;
+text-align: center;
+color: #2A527A;
 }
